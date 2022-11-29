@@ -28,9 +28,16 @@ public class WordCount {
 	 *         associated with the number of occurrences of the word
 	 */
 	public static Map<String, Integer> countWords(List<String> words) {
-
-		// FIXME
-		throw new NotYetImplementedException();
-
+		Map <String, Integer> WC=new HashMap<String, Integer>();
+		for (String word: words) {
+			if (WC.get(word)==null) {
+				WC.put(word,1);
+			}
+			else
+			{
+				WC.put(word, WC.get(word)+1);
+			}
+		}
+		return WC;
 	}
 }

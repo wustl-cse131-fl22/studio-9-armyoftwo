@@ -7,6 +7,8 @@ import java.util.Scanner;
 import support.cse131.NotYetImplementedException;
 
 public class NameToHeight {
+	
+	
 	/**
 	 * Construct and fill a map with your studio group members' names, each
 	 * associated with his or her height.
@@ -18,10 +20,26 @@ public class NameToHeight {
 	 * contain a specified name.
 	 */
 	public static void main(String[] args) {
+		Map <String, Integer> NtH=new HashMap<String, Integer>();
 		Scanner in = new Scanner(System.in);
+		NtH.put("Aidian",77);
+		NtH.put("Tyrus",74);
+		boolean Stop=false;
+		while (Stop==false){
+			System.out.println("Please Enter A Name of the Group");
+			String Key=in.next();
+		if(NtH.containsKey(Key)) {
+			System.out.println(NtH.get(Key));
+		}
+		else if (Key.equals("quit")||Key.equals("Quit")) {
+		Stop=true;	
+		}
+		else {
+			System.out.println("Sorry, "+Key+" is not a member of the group or their name is not capitalized.");
+		}
+			
+		
 
-		// FIXME
-		throw new NotYetImplementedException();
-
+	}
 	}
 }
